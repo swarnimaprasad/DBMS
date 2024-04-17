@@ -1,1 +1,1 @@
-# E-Commerce for the diabled - `accessisphere`
+# E-Commerce for the disabled - `accessisphere`
