@@ -294,8 +294,7 @@ def signup():
                     "Error, try with valid entries. try entering all essential details:"
                 )
         finally:
-            print("^^^^^^^^^^^^^^")
-            # mycursor.close()  # Close the cursor
+            mycursor.close()  # Close the cursor
             # cnx.close()  # Close the connection
 
 
