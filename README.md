@@ -11,17 +11,6 @@ Accessisphere is a full-stack database-driven e-commerce platform dedicated to m
 * **Real-time interactions** – AJAX-based updates for cart and product filtering.
 * **Relational database** – normalized MySQL schema with user, product, order, and inventory tables.
 
-## Tech Stack
-
-* **Frontend**: HTML5, CSS3, JavaScript (vanilla)
-* **Backend**: Python 3.x, Flask, Flask-Login, Flask-WTF
-* **Database**: MySQL 8.x (or MariaDB)
-* **Version Control**: Git & GitHub
-
-## Getting Started
-
-Follow these steps to get the project running on your local machine.
-
 ### Prerequisites
 
 * **Python 3.7+**: Ensure Python is installed and available on your `PATH`.
