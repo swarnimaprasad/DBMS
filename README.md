@@ -11,13 +11,21 @@ Accessisphere is a full-stack database-driven e-commerce platform dedicated to m
 * **Real-time interactions** – AJAX-based updates for cart and product filtering.
 * **Relational database** – normalized MySQL schema with user, product, order, and inventory tables.
 
-### Prerequisites
+## 🗂️ Folder Structure
 
-* **Python 3.7+**: Ensure Python is installed and available on your `PATH`.
-* **MySQL**: Install MySQL server (8.x) or compatible (MariaDB).
-* **Git**: For cloning the repository and version control.
+```plaintext
+DBMS/
+├── SQL/
+│   └── script.sql             # SQL schema and seed data
+└── frontend/
+    ├── index.html             # Homepage
+    ├── login.html             # Login screen
+    ├── signup.html            # Signup screen
+    ├── student_dashboard.html # Student dashboard (profile, courses)
+    ├── admin_dashboard.html   # Admin interface (students, courses)
+    └── styles.css             # Custom CSS styles
+```
 
-### Installation & Setup
 
 1. **Clone the Repository**
 
@@ -26,22 +34,9 @@ Accessisphere is a full-stack database-driven e-commerce platform dedicated to m
    cd DBMS
    ```
 
-2. **Create a Virtual Environment**
 
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate    # On Windows: venv\Scripts\activate
-   ```
 
-3. **Install Dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure Environment Variables**
-
-   Create a `.env` file in the root directory with the following:
+2. **Configure Environment Variables**
 
    ```ini
    FLASK_APP=app.py
@@ -53,20 +48,6 @@ Accessisphere is a full-stack database-driven e-commerce platform dedicated to m
    MYSQL_HOST=localhost
    MYSQL_PORT=3306
    ```
-
-5. **Initialize the Database**
-
-   * Create the database schema by running the SQL script:
-
-     ```bash
-     mysql -u your_mysql_username -p < database/schema.sql
-     ```
-
-   * (Optional) Seed with sample data:
-
-     ```bash
-     mysql -u your_mysql_username -p accessisphere_db < database/seeds.sql
-     ```
 
 
 ## Project Structure
