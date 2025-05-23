@@ -27,7 +27,6 @@ DBMS/
 ```
 ## Backend Overview: SQL Schema
 
-The core of the project lies in the script.sql file, which defines three main tables:
 
 student: Stores student details like name, email (unique), password, and enrolled course.
 
