@@ -11,7 +11,7 @@ Accessisphere is a full-stack database-driven e-commerce platform dedicated to m
 * **Real-time interactions** – AJAX-based updates for cart and product filtering.
 * **Relational database** – normalized MySQL schema with user, product, order, and inventory tables.
 
-## 🗂️ Folder Structure
+## Folder Structure
 
 ```plaintext
 DBMS/
@@ -25,6 +25,21 @@ DBMS/
     ├── admin_dashboard.html   # Admin interface (students, courses)
     └── styles.css             # Custom CSS styles
 ```
+## Backend Overview: SQL Schema
+
+The core of the project lies in the script.sql file, which defines three main tables:
+
+student: Stores student details like name, email (unique), password, and enrolled course.
+
+course: Contains course names and instructor information.
+
+enrollment: A many-to-many mapping between students and courses using foreign keys.
+
+Sample data is inserted to show a working model — with 2 students, 2 courses, and enrollment records.
+
+This schema ensures data normalization, referential integrity, and scalability for future additions like multiple semesters or grades.
+
+
 
 
 1. **Clone the Repository**
