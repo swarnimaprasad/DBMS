@@ -2,14 +2,6 @@
 
 Accessisphere is a full-stack database-driven e-commerce platform dedicated to making assistive and accessibility products easily available to those who need them. Built with a responsive frontend, secure Flask backend, and a MySQL relational database, the application provides a seamless shopping experience tailored to accessibility needs.
 
-## Key features
-
-* **User authentication & authorization** – secure sign-up, login, password hashing, and session management.
-* **Product catalog** – browse, search, and filter by category, price, and accessibility tags.
-* **Shopping cart & orders** – add/remove items, review cart, place orders, view order history.
-* **Admin dashboard** – add, edit, or remove products; monitor orders; manage inventory.
-* **Real-time interactions** – AJAX-based updates for cart and product filtering.
-* **Relational database** – normalized MySQL schema with user, product, order, and inventory tables.
 
 ## Folder Structure
 
@@ -25,19 +17,6 @@ DBMS/
     ├── admin_dashboard.html   # Admin interface (students, courses)
     └── styles.css             # Custom CSS styles
 ```
-## Backend Overview: SQL Schema
-
-
-student: Stores student details like name, email (unique), password, and enrolled course.
-
-course: Contains course names and instructor information.
-
-enrollment: A many-to-many mapping between students and courses using foreign keys.
-
-Sample data is inserted to show a working model — with 2 students, 2 courses, and enrollment records.
-
-This schema ensures data normalization, referential integrity, and scalability for future additions like multiple semesters or grades.
-
 
 
 
