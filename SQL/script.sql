@@ -1,4 +1,4 @@
--- Drop database accessisphere;
+Drop database accessisphere;
 CREATE DATABASE if not exists ACCESSISPHERE;
 USE ACCESSISPHERE;
 
@@ -16,10 +16,34 @@ CREATE TABLE IF NOT EXISTS Users (
     ApartmentNo varchar(255) NOT NULL,
     Pincode varchar(255) NOT NULL check (length(pincode)=6),
     Landmark varchar(255)
+    
 );
-ALTER TABLE users
-ADD account_status VARCHAR(20) DEFAULT 'Active';
+-- ALTER TABLE users D-- ROP COLUMN account_status;
+-- ALTER TABLE users ADD account_status VARCHAR(20) DEFAULT 'Active';
+-- Step 1: Change the delimiter to allow defining the procedure
+DELIMITER //
 
+-- Step 2: Create a stored procedure to handle the logic
+CREATE PROCEDURE add_account_status_column()
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 
+        FROM INFORMATION_SCHEMA.COLUMNS 
+        WHERE TABLE_NAME = 'users' 
+        AND COLUMN_NAME = 'account_status'
+    ) THEN
+        ALTER TABLE users ADD account_status VARCHAR(20) DEFAULT 'Active';
+    END IF;
+END //
+
+-- Step 3: Reset the delimiter back to semicolon
+DELIMITER ;
+
+-- Step 4: Execute the procedure
+CALL add_account_status_column();
+
+-- Step 5: (Optional) Clean up by dropping the procedure
+DROP PROCEDURE IF EXISTS add_account_status_column;
 
 -- DROP TABLE IF EXISTS premiummember;
 CREATE TABLE if not exists premiummember (
@@ -73,7 +97,7 @@ IFSCcode int not null ,
 UPI_id varchar(100) not null
 
  );
- ALTER TABLE Supplier DROP PRIMARY KEY;
+ALTER TABLE Supplier DROP PRIMARY KEY;
 
 ALTER TABLE Supplier
 ADD PRIMARY KEY (SupplierID, Street);
