@@ -1,6 +1,6 @@
-# Accessisphere: E-Commerce Platform for Accessibility Products
+# E-Commerce Platform for Products
 
-Accessisphere is a full-stack database-driven e-commerce platform dedicated to making assistive and accessibility products easily available to those who need them. Built with a responsive frontend, secure Flask backend, and a MySQL relational database, the application provides a seamless shopping experience tailored to accessibility needs.
+This Project is a full-stack database-driven e-commerce platform dedicated to making  products easily available to those who need them. Built with a responsive frontend, secure Flask backend, and a MySQL relational database, the application provides a seamless shopping experience tailored to accessibility needs.
 
 
 ## Folder Structure
@@ -20,16 +20,10 @@ DBMS/
 
 
 
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/palak-b19/DBMS.git
-   cd DBMS
-   ```
 
 
 
-2. **Configure Environment Variables**
+ **Configure Environment Variables**
 
    ```ini
    FLASK_APP=app.py
